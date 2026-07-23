@@ -1,4 +1,4 @@
-name: .NET CI PIPELINE
+name: .NET CI Pipeline 
 on:
   push:
     branches: master
@@ -20,4 +20,5 @@ jobs:
          run:  dotnet build service/EmpManagemnt/EmpManagemnt.sln --configuration Release --no-restore 
        - name: Test
          run:  dotnet test service/EmpManagemnt/EmpManagemnt.sln --no-build --verbosity normal
+
 
