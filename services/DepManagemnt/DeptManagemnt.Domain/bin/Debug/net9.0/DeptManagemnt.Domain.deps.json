@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "DeptManagemnt.Domain/1.0.0": {
+        "runtime": {
+          "DeptManagemnt.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DeptManagemnt.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
