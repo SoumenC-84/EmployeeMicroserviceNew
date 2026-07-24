@@ -15,10 +15,10 @@ jobs:
          with:
            dotnet-version: 9.0.x 
        - name: Restore Dependencies
-         run:  dotnet restore service/EmpManagemnt/EmpManagemnt.sln  
+         run:  dotnet restore services/EmpManagemnt/EmpManagemnt.sln  
        - name: Build
-         run:  dotnet build service/EmpManagemnt/EmpManagemnt.sln --configuration Release --no-restore 
+         run:  dotnet build services/EmpManagemnt/EmpManagemnt.sln --configuration Release --no-restore 
        - name: Test
-         run:  dotnet test service/EmpManagemnt/EmpManagemnt.sln --no-build --verbosity normal
+         run:  dotnet test services/EmpManagemnt/EmpManagemnt.sln --no-build --verbosity normal
 
 
