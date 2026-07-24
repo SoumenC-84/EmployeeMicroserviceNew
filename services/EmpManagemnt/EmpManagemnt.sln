@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpManagemnt.API", "EmpMana
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmpManagemnt.Domain", "EmpManagemnt.Domain", "{B9A59BCA-5C4A-D25C-E0B0-E5E90136F164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empmanagemnt.Domain", "EmpManagemnt.Domain\Empmanagemnt.Domain.csproj", "{294F65E7-1B24-4D1B-BC63-160F5A993628}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empmanagemnt.Domain", "EmpManagemnt.Domain\EmpManagemnt.Domain.csproj", "{294F65E7-1B24-4D1B-BC63-160F5A993628}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpManagemnt.Application", "EmpManagemnt.Application\EmpManagemnt.Application.csproj", "{1EE9FC52-B182-494A-906D-FEE3584E3F31}"
 EndProject
