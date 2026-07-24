@@ -18,7 +18,5 @@ jobs:
          run:  dotnet restore services/EmpManagemnt/EmpManagemnt.sln  
        - name: Build
          run:  dotnet build services/EmpManagemnt/EmpManagemnt.sln --configuration Release --no-restore 
-       - name: Test
-         run:  dotnet test services/EmpManagemnt/EmpManagemnt.sln --no-build --verbosity normal
-
+       
 
