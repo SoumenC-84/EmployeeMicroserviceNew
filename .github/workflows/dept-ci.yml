@@ -1,0 +1,21 @@
+name: .NET CI Pipeline Department
+on:
+  push:
+    branches: master
+  pull_request:
+    branches: master
+
+jobs:
+    build:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout Source Code
+         uses: actions/checkout@v4
+       - name: Setup .NET 9
+         uses: actions/setup-dotnet@v4
+         with:
+           dotnet-version: 9.0.x 
+       - name: Restore Dependencies
+         run:  dotnet restore services/Department/Department.sln  
+       - name: Build
+         run:  dotnet build services/Department/Department.sln --configuration Release --no-restore
