@@ -36,3 +36,4 @@ jobs:
           app-name: emp-management-app
           publish-profile: ${{ secrets.EMPSERVICESECRET }}
           package: ./publish
+          
