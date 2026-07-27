@@ -18,4 +18,4 @@ jobs:
        - name: Restore Dependencies
          run:  dotnet restore services/DepManagemnt/DeptManagemnt.sln  
        - name: Build
-         run:  dotnet build services/DeptManagemnt/DeptManagemnt.sln --configuration Release --no-restore
+         run:  dotnet build services/DepManagemnt/DeptManagemnt.sln --configuration Release --no-restore
