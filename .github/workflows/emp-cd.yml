@@ -1,0 +1,38 @@
+name: EMP CD
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Restore Dependencies
+        run: dotnet restore services/EmpManagemnt/EmpManagemnt.sln
+
+      - name: Build
+        run: dotnet build services/EmpManagemnt/EmpManagemnt.sln --configuration Release --no-restore
+
+      - name: Publish
+        run: dotnet publish services/EmpManagemnt/EmpManagemnt.sln --configuration Release --no-build --output ./publish
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: emp-management-app
+          publish-profile: ${{ secrets.EMPSERVICESECRET }}
+          package: ./publish

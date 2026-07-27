@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmpGatewayService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3695717f6ce36907101884314b7143e6818950c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccc9a24a046fade586725125b322fe3889fac199")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmpGatewayService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmpGatewayService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
