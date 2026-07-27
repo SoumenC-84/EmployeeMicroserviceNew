@@ -16,6 +16,6 @@ jobs:
          with:
            dotnet-version: 9.0.x 
        - name: Restore Dependencies
-         run:  dotnet restore services/Department/Department.sln  
+         run:  dotnet restore services/DepManagemnt/DeptManagemnt.sln  
        - name: Build
-         run:  dotnet build services/Department/Department.sln --configuration Release --no-restore
+         run:  dotnet build services/DeptManagemnt/DeptManagemnt.sln --configuration Release --no-restore
