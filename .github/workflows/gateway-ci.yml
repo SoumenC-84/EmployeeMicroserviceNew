@@ -15,6 +15,6 @@ jobs:
          with:
            dotnet-version: 9.0.x 
        - name: Restore Dependencies
-         run:  dotnet restore services/Gateway/Gateway.sln  
+         run:  dotnet restore gateway/EmpGatewayService/EmpGatewayService.csproj  
        - name: Build
-         run:  dotnet build services/Gateway/Gateway.sln --configuration Release --no-restore
+         run:  dotnet build gateway/EmpGatewayService/EmpGatewayService.csproj  --configuration Release --no-restore
