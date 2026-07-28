@@ -28,3 +28,4 @@ jobs:
             app-name: dept-management-app
             publish-profile: ${{ secrets.DEPTSERVICESECRET }}
             package: ./publish     
+            
