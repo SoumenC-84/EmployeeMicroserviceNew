@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmpManagemnt.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccc9a24a046fade586725125b322fe3889fac199")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d95658555e01f5e082e93396aa341160939886af")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmpManagemnt.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmpManagemnt.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
