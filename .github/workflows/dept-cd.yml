@@ -1,4 +1,4 @@
-name: DEPT CD
+name: DEPT CD Pipeline
 on:
   push:
     branches:
@@ -28,4 +28,3 @@ jobs:
             app-name: dept-management-app
             publish-profile: ${{ secrets.DEPTSERVICESECRET }}
             package: ./publish     
-            
