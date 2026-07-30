@@ -2,11 +2,11 @@
     "Routes": [
         {
             "DownstreamPathTemplate": "/api/employee",
-            "DownstreamScheme": "http",
+            "DownstreamScheme": "https",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
-                    "Port": 5154
+                    "Host": "employeemicroservices-e3bsbffwcpgph6e0.centralindia-01.azurewebsites.net",
+                    "Port": 443
                 }
             ],
             "UpstreamPathTemplate": "/api/employee",
@@ -20,11 +20,11 @@
         },
         {
             "DownstreamPathTemplate": "/api/employee/{everything}",
-            "DownstreamScheme": "http",
+            "DownstreamScheme": "https",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
-                    "Port": 5154
+                    "Host": "employeemicroservices-e3bsbffwcpgph6e0.centralindia-01.azurewebsites.net",
+                    "Port": 443
                 }
             ],
             "UpstreamPathTemplate": "/api/employee/{everything}",
@@ -38,11 +38,11 @@
         },
         {
             "DownstreamPathTemplate": "/api/department",
-            "DownstreamScheme": "http",
+            "DownstreamScheme": "https",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
-                    "Port": 5216
+                    "Host": "departmentservice-g9gwbeg2btgmaqh5.centralindia-01.azurewebsites.net",
+                    "Port": 443
                 }
             ],
             "UpstreamPathTemplate": "/api/department",
@@ -56,11 +56,11 @@
         },
         {
             "DownstreamPathTemplate": "/api/department/{everything}",
-            "DownstreamScheme": "http",
+            "DownstreamScheme": "https",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
-                    "Port": 5216
+                    "Host": "departmentservice-g9gwbeg2btgmaqh5.centralindia-01.azurewebsites.net",
+                    "Port": 443
                 }
             ],
             "UpstreamPathTemplate": "/api/department/{everything}",
@@ -74,6 +74,6 @@
         }
     ],
     "GlobalConfiguration": {
-        "BaseUrl": "http://localhost:5193"
+        "BaseUrl": "https://gatewayservice-bzeygzbca8degmb7.centralindia-01.azurewebsites.net"
     }
 }

@@ -10,10 +10,12 @@ namespace EmpManagemnt.API.Controllers;
 public class EmployeeController : ControllerBase
 {
     private readonly IMediator _mediator;
+    private readonly ILogger _logger;
 
-    public EmployeeController(IMediator mediator)
+    public EmployeeController(IMediator mediator, ILogger logger)
     {
         _mediator = mediator;
+        _logger = logger;
     }
 
     [HttpGet]
@@ -40,6 +42,7 @@ public class EmployeeController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateEmployee([FromBody] Employee employee, CancellationToken cancellationToken)
     {
+        _logger.LogInformation("CreateEmployee API Hit");
         try
         {
             if (employee == null)
@@ -57,7 +60,7 @@ public class EmployeeController : ControllerBase
         }
         catch (Exception ex)
         {
-            Console.Write(ex.Message);
+            _logger.LogError(ex.Message);
             return BadRequest(ex.Message);
         }
     }

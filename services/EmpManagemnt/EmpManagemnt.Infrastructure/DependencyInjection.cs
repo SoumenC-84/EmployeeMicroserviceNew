@@ -17,6 +17,7 @@ public static class DependencyInjection
         services.AddScoped<IEmployeeReadRepository, EmployeeRepository>();
         services.AddScoped<IMediator, Mediator>();
 
+
         return services;
     }
 }
