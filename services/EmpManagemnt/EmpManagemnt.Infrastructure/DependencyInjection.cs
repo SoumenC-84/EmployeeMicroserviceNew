@@ -10,12 +10,12 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(this IServiceCollection services,
                         IConfiguration configuration)
     {
-        services.AddDbContext<EmpDBContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+        // services.AddDbContext<EmpDBContext>(options =>
+        //  options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<IEmployeeWriteRepository, EmployeeRepository>();
         services.AddScoped<IEmployeeReadRepository, EmployeeRepository>();
-        services.AddScoped<IMediator, Mediator>();
+        //services.AddScoped<IMediator, Mediator>();
 
 
         return services;
