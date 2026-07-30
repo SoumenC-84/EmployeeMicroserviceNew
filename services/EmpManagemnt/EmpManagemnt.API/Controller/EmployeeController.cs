@@ -40,17 +40,25 @@ public class EmployeeController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateEmployee([FromBody] Employee employee, CancellationToken cancellationToken)
     {
-        if (employee == null)
+        try
         {
-            return BadRequest();
+            if (employee == null)
+            {
+                return BadRequest();
+            }
+
+            var command = new CreateEmployeeCommand(employee);
+
+            // CRITICAL FIX: You MUST await this call so the employee gets saved 
+            // to the database before executing the next line.
+            await _mediator.Send(command, cancellationToken);
+
+            return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id }, employee);
         }
-
-        var command = new CreateEmployeeCommand(employee);
-
-        // CRITICAL FIX: You MUST await this call so the employee gets saved 
-        // to the database before executing the next line.
-        await _mediator.Send(command, cancellationToken);
-
-        return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id }, employee);
+        catch (Exception ex)
+        {
+            Console.Write(ex.Message);
+            return BadRequest(ex.Message);
+        }
     }
 }
